@@ -18,10 +18,10 @@ function VideoDetail() {
             console.log(response.data[0].comments);
         });
 
-    },[]);
+    }, []);
 
     return (
-        
+
         <div className="grid-container">
             <div className="left">
                 {
@@ -34,7 +34,9 @@ function VideoDetail() {
 
             </div>
             <div className="center">
-
+                <iframe width="80%" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                </iframe>
             </div>
             <div className="right">
                 <h2>Comments:</h2>
@@ -52,28 +54,28 @@ function VideoDetail() {
                     }
                 </div>
                 <div className="add-comment-section">
-                        <input id="username" type="text" placeholder="username"/>
-                        <textarea id="comment" type="text" placeholder="comment"/>
-                        <br />
-                        <button id="submitButton" type="" onClick={submitComment} data-id={id}>Submit</button>
+                    <input id="username" type="text" placeholder="username" />
+                    <textarea id="comment" type="text" placeholder="comment" />
+                    <br />
+                    <button id="submitButton" type="" onClick={submitComment} data-id={id}>Submit</button>
                 </div>
             </div>
         </div>
     );
 }
 
-function submitComment(id){
+function submitComment(id) {
     const username = document.querySelector('#username').value;
     const comment = document.querySelector('#comment').value;
     const videoId = document.querySelector('#submitButton').getAttribute('data-id');
-    
+
     const commentObject = {
-        "video_id":videoId,
-        "username":username,
-        "comment":comment
+        "video_id": videoId,
+        "username": username,
+        "comment": comment
     };
 
-    axios.post('https://erin-nice-zebra.cyclic.app/api/comment',commentObject).then((response)=>{
+    axios.post('https://erin-nice-zebra.cyclic.app/api/comment', commentObject).then((response) => {
         console.log(response);
         window.location.reload(false);
     })
