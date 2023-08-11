@@ -75,7 +75,7 @@ function submitComment(id){
 
     axios.post('https://erin-nice-zebra.cyclic.app/api/comment',commentObject).then((response)=>{
         console.log(response);
-        location.reload();
+        window.location.reload(false);
     })
 
 
