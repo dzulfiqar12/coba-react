@@ -1,0 +1,114 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,54);
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 52px;
+    background-color: rgb(40, 40, 47);
+    align-items: center;
+
+}
+.header-title{
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: rgb(220, 24, 24); */
+    padding: 0px 8px;
+    margin: 20px 10px;
+}
+.card{
+    position: relative;
+    height: 300px;
+    width: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    margin: 16px;
+}
+.card:hover{
+    height: 315px;
+    width: 165px;
+
+}
+.card > img{
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    display: flex;
+    grid-area: left;
+    /* background-color: white; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.center{
+    display: flex;
+    grid-area: center;
+    /* background-color: white; */
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    grid-area: right;
+    /* background-color: white; */
+}
+
+.grid-container {
+    width: 100%;
+    height: 768px; 
+    display: grid;
+    grid-template-areas: 'left center right';
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100%; 
+   
+}
+.product{
+    width: 80%;
+    height: 20%;
+    background-color: red;
+    margin: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.right{
+    background-color: yellow;
+}
+
+.comment-section{
+    height: 80%;
+    overflow: auto;
+    background-color: orange;
+}
+
+.add-comment-section{
+    height: auto;
+
+}
+
+.comment-wrapper{
+    background-color: blueviolet;
+    margin:5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 2px 20px;
+}
+
+.right h2{
+    margin-left: 10px;
+
+}
