@@ -49,9 +49,10 @@ header{
 .left{
     display: flex;
     grid-area: left;
-    /* background-color: white; */
+    background-color: purple;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
 }
 
 .center{
@@ -90,7 +91,7 @@ header{
 }
 
 .comment-section{
-    height: 80%;
+    height: 70%;
     overflow: auto;
     background-color: orange;
 }
@@ -112,3 +113,35 @@ header{
     margin-left: 10px;
 
 }
+
+.add-comment-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .add-comment-section h4{
+    margin: 10px;
+  }
+
+  .add-comment-section #username{
+    width: 70%;
+  }
+  .add-comment-section #comment{
+    width: 70%;
+    height: 50px;
+  }
+  
+  .add-comment-section #submitButton{
+    margin: 5px;
+  }
+
+  a.product{
+    text-decoration: none;
+  }
+  .product p{
+    color: white;
+    font-weight: bold;
+  }
+  
